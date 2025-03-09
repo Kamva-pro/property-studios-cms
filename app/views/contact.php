@@ -20,7 +20,7 @@ include __DIR__ . '/components/navbar.php';
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea type="text" id="message" name="message"></textarea><br>
+        <textarea type="text" id="message" name="message" required></textarea><br>
 
         <button type="submit">Submit</button>
      
