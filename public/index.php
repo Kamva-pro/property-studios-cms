@@ -1,27 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Data</title>
-</head>
-<body>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-<h2>Submit your form</h2>
-<form action="submit.php" method="POST">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+require_once __DIR__ . '/../vendor/autoload.php'; 
+require_once __DIR__ . '/../config/db-config.php';
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+use app\controllers\DataController; 
 
-    <label for="message">Message:</label><br>
-    <textarea type="text" id="message" name="message"></textarea><br>
+if (!class_exists('app\controllers\DataController')) {
+    echo 'DataController class does NOT exist!';
+    die;
+} 
+ 
 
-    <button type="submit">Submit</button>
-    <br><br>
-    <a href="login.php">Login</a>
-</form>
+session_start();
 
-</body>
-</html>
+$db = (new DatabaseConnection())->getConnection();
+$controller = new DataController($db);
+
+$basePath = '/crud-app/public';
+
+$request = str_replace($basePath, '', $_SERVER['REQUEST_URI']);
+
+switch ($request) {
+    case '/':
+        $controller->index();
+        break;
+    case '/submit':
+        $controller->submit();
+        break;
+    case '/success':
+        $controller->success();
+        break;
+    default:
+        http_response_code(404);
+        echo '404 - Page not found';
+        break;
+}
+?>
