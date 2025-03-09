@@ -15,6 +15,7 @@ $currentPage = $currentPage ?? 'home';
         <ul>
             <li><a href="/crud-app/public/" <?php echo $currentPage === 'home' ? 'class="active"' : ''; ?>>Home</a></li>
             <?php if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']): ?>
+                <li><a href="/crud-app/public/admin" <?php echo $currentPage === 'admin' ? 'class="active"' : ''; ?>>Admin Panel</a></li>
                 <li><a href="/crud-app/public/logout">Logout</a></li>
                 <li>Welcome, <?php echo htmlspecialchars($_SESSION['admin_username']); ?></li>
             <?php else: ?>
