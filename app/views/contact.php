@@ -12,7 +12,7 @@ include __DIR__ . '/components/navbar.php';
 </head>
 <body>
     <h2>Tell us what you think</h2>
-    <form action="/crud-app/public/submit" method="POST">
+    <form action="/crud-app/submit" method="POST">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 

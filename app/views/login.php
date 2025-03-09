@@ -11,7 +11,7 @@ include __DIR__ . "/components/navbar.php";
 </head>
 <body>
     <h1>Login to the access the Admin Panel</h1>
-    <form action="crud-app/public/login" method="POST">
+    <form action="crud-app/login" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" required placeholder="Admin"><br><br>
 

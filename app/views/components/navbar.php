@@ -15,12 +15,12 @@ $currentPage = $currentPage ?? 'home';
 
         <div id="navbrand">Contact Management System</div>
         <ul>
-            <li><a href="/crud-app/public/" <?php echo $currentPage === 'home' ? 'class="active"' : ''; ?>>Home</a></li>
+            <li><a href="/crud-app/" <?php echo $currentPage === 'home' ? 'class="active"' : ''; ?>>Home</a></li>
             <?php if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']): ?>
-                <li><a href="/crud-app/public/admin" <?php echo $currentPage === 'admin' ? 'class="active"' : ''; ?>>Admin Panel</a></li>
-                <li><a href="/crud-app/public/logout">Logout</a></li>
+                <li><a href="/crud-app/admin" <?php echo $currentPage === 'admin' ? 'class="active"' : ''; ?>>Admin Panel</a></li>
+                <li><a href="/crud-app/logout">Logout</a></li>
             <?php else: ?>
-                <li><a href="/crud-app/public/login" <?php echo $currentPage === 'login' ? 'class="active"' : ''; ?>>Login</a></li>
+                <li><a href="/crud-app/login" <?php echo $currentPage === 'login' ? 'class="active"' : ''; ?>>Login</a></li>
             <?php endif; ?>
         </ul>
         </div>

@@ -14,7 +14,7 @@ include __DIR__ . '/components/navbar.php';
 
 <script>
      setTimeout(function() {
-        window.location.href = '/crud-app/public'; 
+        window.location.href = '/crud-app/'; 
     }, 3500); 
 </script>
 </body>

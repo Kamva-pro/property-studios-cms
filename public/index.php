@@ -8,20 +8,19 @@ require_once __DIR__ . '/../config/db-config.php';
 use app\controllers\AuthController;
 use app\controllers\DataController; 
 use app\models\DatabaseConnection;
-session_start();
 
+session_start();
 
 if (!class_exists('app\controllers\DataController')) {
     echo 'DataController class does NOT exist!';
     die;
 } 
- 
 
 $db = (new DatabaseConnection())->getConnection();
 $controller = new DataController($db);
 $authController = new AuthController();
 
-$basePath = '/crud-app/public';
+$basePath = '/crud-app';
 
 $request = str_replace($basePath, '', $_SERVER['REQUEST_URI']);
 

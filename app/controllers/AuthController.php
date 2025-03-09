@@ -17,7 +17,7 @@ class AuthController {
                 $_SESSION["admin_logged_in"] = true;
                 $_SESSION["admin_username"] = $username;
              
-                header("Location: /crud-app/public/admin"); 
+                header("Location: /crud-app/admin"); 
                 exit;
             } else {
                 echo "Invalid admin credentials.";
@@ -28,7 +28,7 @@ class AuthController {
 
     public function logout() {
         session_destroy();
-        header('Location: /crud-app/public/');
+        header('Location: /crud-app/');
         exit;
     }
 }

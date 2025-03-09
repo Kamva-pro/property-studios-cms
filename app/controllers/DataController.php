@@ -12,7 +12,7 @@ class DataController {
 
     public function admin() {
         if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
-            header('Location: /crud-app/public/login');
+            header('Location: /crud-app/login');
             exit;
         }
 
@@ -38,7 +38,7 @@ class DataController {
                 die;
             }
             if ($this->model->saveSubmission($name, $email, $message)) {
-                header('Location: /crud-app/public/success');
+                header('Location: /crud-app/success');
                 exit;
             } else {
                 echo "Error: Unable to save submission.";
