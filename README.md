@@ -1,5 +1,5 @@
 ## PROPERTY STUDIOS - Contact Management System
-A Content Management System for Property Studios which uses prioritizes code maintainability 
+A Content Management System for Property Studios which prioritizes code maintainability 
 through a modular approach using an MVC architecture. 
 
 ---
