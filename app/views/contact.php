@@ -1,3 +1,8 @@
+<?php
+$currentPage = 'contact';
+include __DIR__ . '/components/navbar.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +11,7 @@
     <title>Submit Data</title>
 </head>
 <body>
-    <h2>Submit your form</h2>
+    <h2>Tell us what you think</h2>
     <form action="/crud-app/public/submit" method="POST">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
@@ -18,8 +23,7 @@
         <textarea type="text" id="message" name="message"></textarea><br>
 
         <button type="submit">Submit</button>
-        <br><br>
-        <a href="login.php">Login</a>
+     
     </form>
 </body>
 </html>

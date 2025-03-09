@@ -20,4 +20,14 @@ class DataModel {
         }
         return false;
     }
+
+    public function fetchSubmissions() {
+        $sql = "SELECT * FROM user_submissions ORDER BY submitted_at DESC";
+        $result = $this->db->query($sql);
+
+        if ($result) {
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
+        return [];
+    }
 }

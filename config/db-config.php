@@ -2,44 +2,20 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 use Dotenv\Dotenv;
 
-class DatabaseConnection
-{
-    private $connection;
+/*
+search for the dotenv file inside the root directory of the project
+create an immutable instance of the dotenv environment 
+*/
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-    public function __construct()
-    {
-        try {
-            /*
-            search for the dotenv file inside the root directory of the project
-            create an immutable instance of the dotenv environment 
-            */
-            $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-            $dotenv->load();
+define('DB_HOST', $_ENV['DB_HOST']);
+define('DB_USER', $_ENV['DB_USER']);
+define('DB_PASS', $_ENV['DB_PASS']);
+define('DB_NAME', $_ENV['DB_NAME']);
 
-            // retreive hostname, username, password, databasename
+          
 
-            $host = $_ENV["DB_HOST"];
-            $user = $_ENV["DB_USER"];
-            $password = $_ENV["DB_PASS"];
-            $db_name = $_ENV["DB_NAME"];
 
-            $this->connection = new mysqli($host, $user, $password, $db_name);
 
-            if ($this->connection->connect_error)
-            {
-                die("Connection error: " . $this->connection->connect_error);
-            }
-
-        } catch (Exception $error) {
-            die("Unexpected error: " . $error);
-        }
-
-    }
-
-    public function getConnection()
-    {
-        return $this->connection;
-    }
-
-}
 

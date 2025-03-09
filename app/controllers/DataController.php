@@ -10,6 +10,18 @@ class DataController {
         $this->model = new DataModel($db);
     }
 
+    public function admin() {
+        if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
+            header('Location: /crud-app/public/login');
+            exit;
+        }
+
+        $submissions = $this->model->fetchSubmissions();
+
+        require __DIR__ . "/../views/admin.php";
+    }
+
+
     public function index() {
         require __DIR__ . '/../views/contact.php';
     }

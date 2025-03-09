@@ -1,3 +1,8 @@
+<?php
+$currentPage = 'success';
+include __DIR__ . '/components/navbar.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +14,8 @@
 
 <script>
      setTimeout(function() {
-        window.location.href = '/'; 
-    }, 5000); 
+        window.location.href = '/crud-app/public'; 
+    }, 3500); 
 </script>
 </body>
 </html>
