@@ -4,7 +4,7 @@ namespace app\controllers;
 require_once __DIR__ . '/../../config/db-config.php';
 
 class AuthController {
-    public function login($basePath) {
+    public function login() {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $username = $_POST['username'];
             $password = $_POST['password'];

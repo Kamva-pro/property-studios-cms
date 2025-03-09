@@ -37,13 +37,13 @@ switch ($request) {
         $controller->success();
         break;
     case '/login':
-        $authController->login($basePath);
+        $authController->login();
         break;
     case '/logout':
-        $authController->logout($basePath);
+        $authController->logout();
         break;
     case '/admin':
-        $controller->admin($basePath);
+        $controller->admin();
         break;
     default:
         http_response_code(404);
