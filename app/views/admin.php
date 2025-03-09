@@ -9,7 +9,7 @@ include __DIR__ . "/components/navbar.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="/crud-app/public/assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo BASE_PATH; ?>public/assets/css/styles.css">
 </head>
 <body>
     <table>

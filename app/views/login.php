@@ -10,8 +10,8 @@ include __DIR__ . "/components/navbar.php";
     <title>Admin Login</title>
 </head>
 <body>
-    <h1>Login to the access the Admin Panel</h1>
-    <form action="crud-app/login" method="POST">
+    <h2>Login to the access the Admin Panel</h2>
+    <form action="<?php echo BASE_PATH; ?>/login" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" required placeholder="Admin"><br><br>
 

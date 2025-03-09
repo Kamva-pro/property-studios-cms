@@ -20,7 +20,9 @@ $db = (new DatabaseConnection())->getConnection();
 $controller = new DataController($db);
 $authController = new AuthController();
 
-$basePath = '/crud-app';
+$scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+$basePath = rtrim(str_replace('public', '', $scriptDir), '/'); 
+define('BASE_PATH', $basePath);
 
 $request = str_replace($basePath, '', $_SERVER['REQUEST_URI']);
 
@@ -35,13 +37,13 @@ switch ($request) {
         $controller->success();
         break;
     case '/login':
-        $authController->login();
+        $authController->login($basePath);
         break;
     case '/logout':
-        $authController->logout();
+        $authController->logout($basePath);
         break;
     case '/admin':
-        $controller->admin();
+        $controller->admin($basePath);
         break;
     default:
         http_response_code(404);

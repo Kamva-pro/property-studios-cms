@@ -4,7 +4,7 @@ namespace app\controllers;
 require_once __DIR__ . '/../../config/db-config.php';
 
 class AuthController {
-    public function login() {
+    public function login($basePath) {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -17,7 +17,7 @@ class AuthController {
                 $_SESSION["admin_logged_in"] = true;
                 $_SESSION["admin_username"] = $username;
              
-                header("Location: /crud-app/admin"); 
+                header("Location:" . BASE_PATH . "/admin"); 
                 exit;
             } else {
                 echo "Invalid admin credentials.";
@@ -28,7 +28,7 @@ class AuthController {
 
     public function logout() {
         session_destroy();
-        header('Location: /crud-app/');
+        header("Location:" . BASE_PATH); 
         exit;
     }
 }
