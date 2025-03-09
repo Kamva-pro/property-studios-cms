@@ -13,7 +13,7 @@ through a modular approach using an MVC architecture.
    - [Prerequisites](#prerequisites)
    - [Step-by-Step Setup](#step-by-step-setup)
 4. [Using the Application](#using-the-application)
-
+5. [Future Enahncements](#future-enhancements)
 ---
 
 ## Features
@@ -170,5 +170,9 @@ http://localhost/property-studios-cms
 1. After logging in, you will be redirected to the admin panel.
 2. View all user submissions, sorted by the latest submission first.
 
+
+## Future Enhancements
+1. **Pagination** - add some pagintion within the tables to split large lists and provide easier querying.
+2. **Session Security** - add session protection for admin users to avoid things such as session hijacking.
 
 
