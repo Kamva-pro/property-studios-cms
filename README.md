@@ -93,7 +93,7 @@ Before running the application, ensure you have the following installed:
 
 2. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/property-studios-cms.git
+   git clone https://github.com/kamva-pro/property-studios-cms.git
    cd property-studios-cms
 
 3. **Install Dependencies**:
