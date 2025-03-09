@@ -11,6 +11,8 @@ class AuthController {
         
             $admin_username = DB_USER; 
             $admin_password = DB_PASS; 
+
+            
             if ($username === $admin_username && $password === $admin_password) {
                 $_SESSION["admin_logged_in"] = true;
                 $_SESSION["admin_username"] = $username;

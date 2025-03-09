@@ -32,6 +32,11 @@ class DataController {
             $email = $_POST['email'];
             $message = $_POST['message'];
 
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+                echo "Invalid email format";
+                die;
+            }
             if ($this->model->saveSubmission($name, $email, $message)) {
                 header('Location: /crud-app/public/success');
                 exit;

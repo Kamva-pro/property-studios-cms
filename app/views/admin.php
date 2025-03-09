@@ -12,11 +12,9 @@ include __DIR__ . "/components/navbar.php";
     <link rel="stylesheet" href="/crud-app/public/assets/css/styles.css">
 </head>
 <body>
-    <h1>Admin Dashboard</h1>
     <table>
         <thead>
             <tr>
-                <!-- <th>ID</th> -->
                 <th>Name</th>
                 <th>Email</th>
                 <th>Message</th>
