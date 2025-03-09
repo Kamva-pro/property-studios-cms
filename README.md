@@ -20,7 +20,7 @@ through a modular approach using an MVC architecture.
 ## Features
 
 ### Prioritized Features
-1. **Modular and Scalable Architecture**:
+1. **Maintanable Structure**:
    - The application follows the **MVC (Model-View-Controller)** pattern to ensure separation of concerns, making it maintainable, extendable, and scalable.
    
 2. **Dynamic Routing**:
@@ -29,7 +29,7 @@ through a modular approach using an MVC architecture.
 
 3. **Form Submission with Validation**:
    - Users can submit forms in a safe and seamless environment.
-   - Input is validated for security, and data is written to the database using **prepared statements** to prevent SQL injection.
+   - Input is validated for security, and data is written to the database using prepared statements to prevent SQL injections.
 
 4. **Admin Authentication**:
    - Admin users are authenticated using credentials defined in the local database (e.g., phpMyAdmin).
@@ -55,7 +55,7 @@ through a modular approach using an MVC architecture.
    - The application assumes you are using a local development environment with:
      - An **Apache server** (via XAMPP, WAMP, or similar).
      - **PHP** installed (version 8.0 or higher).
-     - **MySQL** or another supported database.
+     - **MySQL** database.
 
 2. **Database Configuration**:
    - The database connection details (e.g., host, username, password) are provided in a `.env` file.
@@ -97,11 +97,10 @@ Before running the application, ensure you have the following installed:
    git clone https://github.com/your-username/property-studios-cms.git
    cd property-studios-cms
 
-3. ### Install Dependencies
-
-```bash
-composer install
-```
+3. **Install Dependencies**:
+   ```bash
+   composer install
+   ```
 
 ### Create the Database
 
@@ -111,7 +110,7 @@ composer install
 
 ```sql
 CREATE TABLE user_submissions (
-    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     message TEXT NOT NULL,
@@ -146,7 +145,7 @@ DB_NAME=your-database-name
 
 ### Access the Application
 
-Open your browser and navigate to:
+Open your browser and navigate to the folder you have just cloned eg.:
 
 ```
 http://localhost/property-studios-cms
@@ -155,15 +154,17 @@ http://localhost/property-studios-cms
 ### Submit a Form
 
 1. Fill out the form on the homepage and submit it.
-2. You will be redirected to a success page.
+3. The data will be validated and saved to the database.
+3. Upon a succesful submission you shall be redirected to the success page, where a success message will be displayed.
+4. After 3 seconds you will be redirected back to the home page.
 
-### Log in as Admin
+### Log in as an Admin
 
 1. Navigate to the login page:
    ```
    http://localhost/property-studios-cms/login
    ```
-2. Use the admin credentials stored in your local database to log in.
+2. Use the admin credentials stored in your local database to log in. These credentials need to match those saved inside your `.env` file.
 
 ### View Submissions
 
