@@ -13,7 +13,6 @@ through a modular approach using an MVC architecture.
    - [Prerequisites](#prerequisites)
    - [Step-by-Step Setup](#step-by-step-setup)
 4. [Using the Application](#using-the-application)
-5. [Future Improvements](#future-improvements)
 
 ---
 
