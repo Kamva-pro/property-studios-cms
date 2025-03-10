@@ -119,13 +119,13 @@ CREATE TABLE user_submissions (
 
 ### Configure the .env File
 
-1. Open the `.env` file in the root directory.
-2. Update the following variables with your database credentials:
+1. Create a `.env` file in the root directory.
+2. Add the following variables matching your phpadmin settings.
 
 ```env
 DB_HOST=localhost
-DB_USER=your-database-username
-DB_PASS=your-database-password
+DB_USER=your-account-username
+DB_PASS=your-password
 DB_NAME=your-database-name
 ```
 
