@@ -119,7 +119,7 @@ CREATE TABLE user_submissions (
 
 ### Configure the .env File
 
-1. Create a `.env` file in the root directory.
+1. Open the `.env` file in the root directory.
 2. Add the following variables matching your phpadmin settings.
 
 ```env
