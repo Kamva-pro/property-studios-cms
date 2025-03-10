@@ -9,7 +9,7 @@ class DataModel {
     }
 
     public function saveSubmission($name, $email, $message) {
-        $sql = "INSERT INTO user_submissions(name, email, message, submitted_at) VALUES (?, ?, ?, NOW())";
+        $sql = "INSERT INTO user_submissions(name, email, message, date_submitted) VALUES (?, ?, ?, NOW())";
         $stmt = $this->db->prepare($sql);
 
         if ($stmt) {
@@ -22,7 +22,7 @@ class DataModel {
     }
 
     public function fetchSubmissions() {
-        $sql = "SELECT * FROM user_submissions ORDER BY submitted_at DESC";
+        $sql = "SELECT * FROM user_submissions ORDER BY date_submitted DESC";
         $result = $this->db->query($sql);
 
         if ($result) {

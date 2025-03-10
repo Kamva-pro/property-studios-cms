@@ -11,11 +11,6 @@ use app\models\DatabaseConnection;
 
 session_start();
 
-if (!class_exists('app\controllers\DataController')) {
-    echo 'DataController class does NOT exist!';
-    die;
-} 
-
 $db = (new DatabaseConnection())->getConnection();
 $controller = new DataController($db);
 $authController = new AuthController();

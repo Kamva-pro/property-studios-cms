@@ -18,7 +18,7 @@ include __DIR__ . "/components/navbar.php";
                 <th>Name</th>
                 <th>Email</th>
                 <th>Message</th>
-                <th>Submitted At</th>
+                <th>Date Submitted</th>
             </tr>
         </thead>
         <tbody>
@@ -28,7 +28,7 @@ include __DIR__ . "/components/navbar.php";
                     <td><?php echo htmlspecialchars($submission['email']); ?></td>
                     <td><?php echo htmlspecialchars($submission['message']); ?></td>
                     <td><?php
-                        $date = new DateTime($submission['submitted_at']);
+                        $date = new DateTime($submission['date_submitted']);
                         echo $date->format('F j, Y, g:i A');
                         ?>
                     </td>

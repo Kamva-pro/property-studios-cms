@@ -8,11 +8,11 @@ include __DIR__ . '/components/navbar.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Data</title>
+    <title>Submit Form</title>
 </head>
 <body>
     <h2>Tell us what you think</h2>
-    <form action="<?php echo BASE_PATH; ?>/submit" method="POST">
+    <form  action="<?php echo BASE_PATH; ?>/submit" method="POST">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
